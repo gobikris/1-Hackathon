@@ -8,8 +8,8 @@ div1.innerHTML = `
           <a class="navbar-brand bg-warning rounded-3 p-2 fw-bold " href="#" style="font-family:'Dancing Script', cursive; ;">Beauty & Cosmetics</a>
           
             <div class="d-flex w-50">
-              <input class="form-control me-2 "  id="find" type="text" placeholder="eg..eyeliner,lipstick" aria-label="Search">
-              <button class=" btn btn-success w-50" onclick="check()">Find</button>
+              <input class="form-control me-2 "  id="task" type="text" placeholder="eg..eyeliner,lipstick" aria-label="Search">
+              <button class=" btn btn-success w-50" onclick="UserGreet()">Find</button>
               
             </div>
           </div>
@@ -37,11 +37,10 @@ document.body.append(containerTag);
 containerTag.append(rowTag);
 
 // fetch 
-async function check() {
-    let find = document.getElementById("find").value;
-    let list1 = await fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${find}`);
+async function UserGreet() {
+    let pro = document.getElementById("task").value;
+    let list1 = await fetch(`https://makeup-api.herokuapp.com/api/v1/products.json?product_type=${pro}`);
     let list2  = await list1.json();
-    console.log(list2);
 // for Each Card create
     list2.forEach(productList => {
 
