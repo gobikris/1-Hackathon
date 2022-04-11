@@ -1,0 +1,27 @@
+body{
+    background-image: url(https://st3.depositphotos.com/5124971/17716/i/1600/depositphotos_177163462-stock-photo-set-cosmetics-black-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.box1{
+    margin-top: 350px;
+}
+.z{
+    transition: transform .2s;
+    margin: 0 auto;
+}
+.z:hover{
+    transform: scale(1.1);
+}
+.tag{
+    margin-top: 100px;
+}
+.logo,.slide{
+    border: solid 2px red;
+    margin-top: 150px;
+    
+}
+.card-body{
+    background-color: lemonchiffon;
+}
