@@ -39,7 +39,7 @@ containerTag.append(rowTag);
 // fetch 
 async function Search() {
     let find = document.getElementById("find").value;
-    let list1 = await fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&product_type=${find}`)
+    let list1 = await fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&product_type=${find}`);
     let list2  = await list1.json();
 
 // for Each Card create
