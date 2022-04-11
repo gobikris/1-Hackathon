@@ -9,7 +9,7 @@ div1.innerHTML = `
           
             <div class="d-flex w-50">
               <input class="form-control me-2 "  id="task" type="text" placeholder="eg..eyeliner,lipstick" aria-label="Search">
-              <button class=" btn btn-success w-50" onclick="UserGreet()">Find</button>
+              <button class=" btn btn-success w-50" onClick="UserGreet()">Find</button>
               
             </div>
           </div>
