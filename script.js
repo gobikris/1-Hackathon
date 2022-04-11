@@ -41,8 +41,8 @@ async function UserGreet() {
     let pro = document.getElementById("task").value;
     let list1 = await fetch(`https://makeup-api.herokuapp.com/api/v1/products.json?product_type=${pro}`);
     let list2  = await list1.json();
-// for Each Card create
-    list2.forEach(productList => {
+//  Each Card create
+    list2.map(productList => {
 
         let colTag = create("div","col ");
         colTag.innerHTML  =`
