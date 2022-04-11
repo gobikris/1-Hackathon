@@ -9,7 +9,7 @@ div1.innerHTML = `
           
             <div class="d-flex w-50">
               <input class="form-control me-2 "  id="find" type="text" placeholder="eg..eyeliner,lipstick" aria-label="Search">
-              <button class=" btn btn-success w-50" type="submit" onclick="Search()">Find</button>
+              <button class=" btn btn-success w-50" onclick="check()">Find</button>
               
             </div>
           </div>
@@ -37,11 +37,11 @@ document.body.append(containerTag);
 containerTag.append(rowTag);
 
 // fetch 
-async function Search() {
+async function check() {
     let find = document.getElementById("find").value;
     let list1 = await fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&product_type=${find}`);
     let list2  = await list1.json();
-
+    console.log(list2);
 // for Each Card create
     list2.forEach(productList => {
 
