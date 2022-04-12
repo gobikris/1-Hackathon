@@ -8,7 +8,7 @@ div1.innerHTML = `
           <a class="navbar-brand bg-warning rounded-3 p-2 fw-bold " href="#" style="font-family:'Dancing Script', cursive; ;">Beauty & Cosmetics</a>
           
             <div class="d-flex w-50">
-              <input class="form-control me-2 "  id="task" type="text" placeholder="eg..eyeliner,lipstick" aria-label="Search">
+              <input class="form-control me-2 "  id="task" type="text" placeholder="Find eg..eyeliner,lipstick" aria-label="Search">
               <button class=" btn btn-success w-50" onClick="UserGreet()">Find</button>
               
             </div>
@@ -42,7 +42,7 @@ async function UserGreet() {
     let list1 = await fetch(`https://makeup-api.herokuapp.com/api/v1/products.json?product_type=${pro}`);
     let list2  = await list1.json();
 //  Each Card create
-    list2.map(productList => {
+    list2.forEach(productList => {
 
         let colTag = create("div","col ");
         colTag.innerHTML  =`
@@ -54,7 +54,7 @@ async function UserGreet() {
           <p class="fw-bold">Name: ${productList.name}</p>
           <p class="fw-bold">Price: $ ${productList.price}</p>
           <a href="${productList.product_link}" target=_blank><button class = "btn btn-success"> Buy Now</button></a>
-          <a href="${productList.website_link}" target=_blank><button class = "btn btn-danger"> Know More</button></a>
+          <a href="${productList.website_link}" target=_blank><button class = "btn btn-danger"> Description </button></a>
         </div>
       </div>
         
